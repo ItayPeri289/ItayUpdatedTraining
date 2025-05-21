@@ -5,9 +5,7 @@ function App() {
   return (
     <div style={{ margin: "-0.5rem" }}>
       <MenuBar />
-      <div>
-        <Tabs />
-      </div>
+      <Tabs />
     </div>
   );
 }
