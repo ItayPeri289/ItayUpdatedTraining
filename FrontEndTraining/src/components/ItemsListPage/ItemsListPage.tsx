@@ -7,7 +7,7 @@ import LinearDeterminate from "../ProgressBars/LinearDeterminate";
 import BuyDialog from "./BuyDialog";
 import ItemsList from "./ItemsList";
 import Alert from "@mui/material/Alert";
-import Utils from '../../Utils/Utils'
+import { sleep } from "../../Utils/Utils";
 
 export default function ItemsListPage() {
   const {
@@ -38,12 +38,12 @@ export default function ItemsListPage() {
   };
 
   const removeAllItemsFromCart = async () => {
-    await Utils.sleep(500);
+    await sleep(500);
     reduceBalance(itemsArray[0].price);
     while (itemsArray.length > 0) {
       removeItemByIndex(0);
       reduceBalance(itemsArray[0].price);
-      await Utils.sleep(500);
+      await sleep(500);
     }
   };
 

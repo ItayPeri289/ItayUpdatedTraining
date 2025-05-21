@@ -31,7 +31,7 @@ export default function AlertDialog(props: StoreCard) {
   };
 
   return (
-    <React.Fragment>
+    <>
       <Button
         color="secondary"
         variant="contained"
@@ -44,7 +44,6 @@ export default function AlertDialog(props: StoreCard) {
       <Dialog
         open={open}
         onClose={handleClose}
-        aria-labelledby={props.title}
         aria-describedby={props.description}
         sx={{ textAlign: "right", width: "25rem", margin: "auto" }}
       >
@@ -80,7 +79,7 @@ export default function AlertDialog(props: StoreCard) {
           </Button>
         </DialogActions>
       </Dialog>
-    </React.Fragment>
+    </>
   );
 }
 
