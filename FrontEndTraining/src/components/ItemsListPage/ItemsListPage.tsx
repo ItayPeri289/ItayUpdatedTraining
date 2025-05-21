@@ -75,14 +75,12 @@ const ItemsListPage = () => {
             backgroundColor: purchaseSucceeded ? "dodgerblue" : "transparent",
           }}
         >
-          {purchaseSucceeded && (
+          {purchaseSucceeded ? (
             <LinearDeterminate
               itemsAmount={cartCount}
               setOpenAlertDialog={setOpenAlertDialog}
             />
-          )}
-
-          {!purchaseSucceeded && (
+          ) : (
             <Alert severity="error" variant="filled" icon={false}>
               ההזמנה לא הושלמה
             </Alert>
