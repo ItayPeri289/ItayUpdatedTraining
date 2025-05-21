@@ -83,12 +83,7 @@ const ItemsListPage = () => {
           )}
 
           {!purchaseSucceeded && (
-            <Alert
-              severity="error"
-              variant="filled"
-              sx={{ width: "50%%" }}
-              icon={false}
-            >
+            <Alert severity="error" variant="filled" icon={false}>
               ההזמנה לא הושלמה
             </Alert>
           )}
