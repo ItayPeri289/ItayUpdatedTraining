@@ -8,12 +8,12 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import ItemsList from "../ItemsListPage/ItemsListPage.tsx";
 import LinearIndeterminate from "../ProgressBars/LinearIndeterminate.tsx";
-import { useState } from "react";
+import { useState, SyntheticEvent } from "react";
 
 const Tabs = () => {
   const [value, setValue] = useState<string>("HomeTab");
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (event: SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 
