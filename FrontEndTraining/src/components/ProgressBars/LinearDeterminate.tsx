@@ -7,6 +7,8 @@ interface loadingProgressBar {
   setOpenAlertDialog: (status: boolean) => void;
 }
 
+const timeOutMs = 500;
+
 const LinearDeterminate = (props: loadingProgressBar) => {
   const [progress, setProgress] = useState<number>(0);
 
@@ -18,7 +20,7 @@ const LinearDeterminate = (props: loadingProgressBar) => {
         const diff = 100 / props.itemsAmount;
         return Math.min(oldProgress + diff, 100);
       });
-    }, 500);
+    }, timeOutMs);
 
     return () => {
       props.setOpenAlertDialog(true);
