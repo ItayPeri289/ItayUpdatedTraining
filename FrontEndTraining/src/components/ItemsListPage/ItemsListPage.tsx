@@ -11,7 +11,7 @@ import { sleep } from "../../Utils/Utils";
 
 const ItemsListPage = () => {
   const {
-    itemsArray,
+    cartItemsArray: cartItemsArray,
     removeItemByIndex,
     cartItemsPrice,
     balance,
@@ -39,15 +39,15 @@ const ItemsListPage = () => {
 
   const removeAllItemsFromCart = async () => {
     await sleep(500);
-    reduceBalance(itemsArray[0].price);
-    while (itemsArray.length > 0) {
+    reduceBalance(cartItemsArray[0].price);
+    while (cartItemsArray.length > 0) {
       removeItemByIndex(0);
-      reduceBalance(itemsArray[0].price);
+      reduceBalance(cartItemsArray[0].price);
       await sleep(500);
     }
   };
 
-  if (itemsArray.length == 0) {
+  if (cartItemsArray.length == 0) {
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div> העגלה ריקה</div>

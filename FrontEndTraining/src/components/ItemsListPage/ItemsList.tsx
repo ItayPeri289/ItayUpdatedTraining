@@ -9,11 +9,13 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import useCartStore from "../../store/cartStore";
 
 const ItemsList = () => {
-  const { itemsArray, removeItemByIndex } = useCartStore((state) => state);
+  const { cartItemsArray: cartItemsArray, removeItemByIndex } = useCartStore(
+    (state) => state
+  );
 
   return (
     <Box>
-      {itemsArray.map((item, index) => (
+      {cartItemsArray.map((item, index) => (
         <Box>
           <Grid size={{ xs: 6, md: 8 }}>
             <List>
