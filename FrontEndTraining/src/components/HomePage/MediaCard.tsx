@@ -37,8 +37,13 @@ const MediaCard = (props: StoreCard) => {
           {props.price}₪
         </Typography>
       </CardContent>
-      <br />
-      <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
+      <CardActions
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: "1.7rem",
+        }}
+      >
         <AlertDialog
           imageUrl={props.imageUrl}
           title={props.title}
