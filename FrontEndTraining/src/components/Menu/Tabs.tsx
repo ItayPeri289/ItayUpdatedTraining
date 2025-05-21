@@ -1,4 +1,3 @@
-import * as React from "react";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -13,7 +12,7 @@ import { useState, SyntheticEvent } from "react";
 const Tabs = () => {
   const [value, setValue] = useState<string>("HomeTab");
 
-  const handleChange = (event: SyntheticEvent, newValue: string) => {
+  const handleChange = (_: SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 

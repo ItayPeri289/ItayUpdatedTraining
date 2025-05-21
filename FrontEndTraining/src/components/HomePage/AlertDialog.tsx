@@ -36,8 +36,7 @@ const AlertDialog = (props: StoreCard) => {
         color="secondary"
         variant="contained"
         onClick={handleClickOpen}
-        sx={{ gap: "0.3rem" }}
-      >
+        sx={{ gap: "0.3rem" }}>
         <InfoIcon />
         פרטים
       </Button>
@@ -45,8 +44,7 @@ const AlertDialog = (props: StoreCard) => {
         open={open}
         onClose={handleClose}
         aria-describedby={props.description}
-        sx={{ textAlign: "right", width: "25rem", margin: "auto" }}
-      >
+        sx={{ textAlign: "right", width: "25rem", margin: "auto" }}>
         <DialogTitle id="title">{props.title}</DialogTitle>
         <DialogContent>
           <DialogContentText id="description">
@@ -72,8 +70,7 @@ const AlertDialog = (props: StoreCard) => {
               handleClose();
               addItem(props);
             }}
-            autoFocus
-          >
+            autoFocus>
             הוסף לעגלה
           </Button>
         </DialogActions>

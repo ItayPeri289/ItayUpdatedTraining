@@ -10,7 +10,7 @@ import useCartStore from "../../store/cartStore";
 
 const ItemsList = () => {
   const { cartItemsArray: cartItemsArray, removeItemByIndex } = useCartStore(
-    (state) => state
+    (state) => state,
   );
 
   return (
