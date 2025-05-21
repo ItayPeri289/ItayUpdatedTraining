@@ -9,7 +9,7 @@ import ItemsList from "./ItemsList";
 import Alert from "@mui/material/Alert";
 import { sleep } from "../../Utils/Utils";
 
-export default function ItemsListPage() {
+const ItemsListPage = () => {
   const {
     itemsArray,
     removeItemByIndex,
@@ -96,4 +96,6 @@ export default function ItemsListPage() {
       </Snackbar>
     </Box>
   );
-}
+};
+
+export default ItemsListPage;

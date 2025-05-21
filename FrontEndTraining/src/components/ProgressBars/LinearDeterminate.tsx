@@ -7,7 +7,7 @@ interface loadingProgressBar {
   setOpenAlertDialog: (status: boolean) => void;
 }
 
-export default function LinearDeterminate(props: loadingProgressBar) {
+const LinearDeterminate = (props: loadingProgressBar) => {
   const [progress, setProgress] = useState<number>(0);
 
   useEffect(() => {
@@ -36,4 +36,6 @@ export default function LinearDeterminate(props: loadingProgressBar) {
       />
     </Box>
   );
-}
+};
+
+export default LinearDeterminate;

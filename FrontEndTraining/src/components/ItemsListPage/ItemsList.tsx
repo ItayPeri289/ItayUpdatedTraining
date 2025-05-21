@@ -9,7 +9,7 @@ import Grid from "@mui/material/Grid";
 import DeleteIcon from "@mui/icons-material/Delete";
 import useCartStore from "../../store/cartStore";
 
-export default function ItemsList() {
+const ItemsList = () => {
   const { itemsArray, removeItemByIndex } = useCartStore((state) => state);
 
   return (
@@ -50,4 +50,6 @@ export default function ItemsList() {
       ))}
     </Box>
   );
-}
+};
+
+export default ItemsList;

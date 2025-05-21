@@ -7,30 +7,29 @@ import DialogContentText from "@mui/material/DialogContentText";
 interface handleThings {
   handleClose: () => void;
 }
+const BuyDialog = (props: handleThings) => (
+  <Dialog
+    open={true}
+    onClose={props.handleClose}
+    sx={{
+      textAlign: "center",
+      width: "25rem",
+      height: "12rem",
+      margin: "auto",
+    }}
+  >
+    <DialogContent>
+      <DialogContentText
+        id="description"
+        sx={{ color: "black", fontSize: "1.2rem" }}
+      >
+        !תתחדש/י
+      </DialogContentText>
+    </DialogContent>
+    <DialogActions sx={{ display: "flex", justifyContent: "left" }}>
+      <Button onClick={props.handleClose}>סגור</Button>
+    </DialogActions>
+  </Dialog>
+);
 
-export default function BuyDialog(props: handleThings) {
-  return (
-    <Dialog
-      open={true}
-      onClose={props.handleClose}
-      sx={{
-        textAlign: "center",
-        width: "25rem",
-        height: "12rem",
-        margin: "auto",
-      }}
-    >
-      <DialogContent>
-        <DialogContentText
-          id="description"
-          sx={{ color: "black", fontSize: "1.2rem" }}
-        >
-          !תתחדש/י
-        </DialogContentText>
-      </DialogContent>
-      <DialogActions sx={{ display: "flex", justifyContent: "left" }}>
-        <Button onClick={props.handleClose}>סגור</Button>
-      </DialogActions>
-    </Dialog>
-  );
-}
+export default BuyDialog;

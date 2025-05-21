@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import ShoppingCartBadge from "./ShoppingCartBadge";
 import useCartStore from "../../store/cartStore";
 
-export default function MenuBar() {
+const MenuBar = () => {
   const balance = useCartStore((state) => state.balance);
 
   return (
@@ -22,4 +22,6 @@ export default function MenuBar() {
       </Toolbar>
     </AppBar>
   );
-}
+};
+
+export default MenuBar;

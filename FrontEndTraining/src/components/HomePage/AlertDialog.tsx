@@ -17,7 +17,7 @@ interface StoreCard {
   price: number;
 }
 
-export default function AlertDialog(props: StoreCard) {
+const AlertDialog = (props: StoreCard) => {
   const addItem = useCartStore((state) => state.addItem);
 
   const [open, setOpen] = useState<boolean>(false);
@@ -80,6 +80,6 @@ export default function AlertDialog(props: StoreCard) {
       </Dialog>
     </>
   );
-}
+};
 
-// add a space between the icon and text in buttons
+export default AlertDialog;

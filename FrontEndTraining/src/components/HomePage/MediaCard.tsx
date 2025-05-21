@@ -16,7 +16,7 @@ interface StoreCard {
   price: number;
 }
 
-export default function MediaCard(props: StoreCard) {
+const MediaCard = (props: StoreCard) => {
   const addItem = useCartStore((state) => state.addItem);
 
   return (
@@ -56,4 +56,6 @@ export default function MediaCard(props: StoreCard) {
       </CardActions>
     </Card>
   );
-}
+};
+
+export default MediaCard;

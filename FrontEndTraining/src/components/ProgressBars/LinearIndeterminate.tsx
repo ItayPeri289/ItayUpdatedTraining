@@ -3,7 +3,7 @@ import LinearProgress from "@mui/material/LinearProgress";
 import { useState, useEffect } from "react";
 import HomePage from "../HomePage/HomePage";
 
-export default function LinearIndeterminate() {
+const LinearIndeterminate = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
@@ -26,4 +26,6 @@ export default function LinearIndeterminate() {
       {!loading && <HomePage />}
     </Box>
   );
-}
+};
+
+export default LinearIndeterminate;

@@ -2,7 +2,7 @@ import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import useCartStore from "../../store/cartStore";
 
-export default function ShoppingCartBadge() {
+const ShoppingCartBadge = () => {
   const cartCount = useCartStore((state) => state.cartCount);
 
   return (
@@ -10,4 +10,6 @@ export default function ShoppingCartBadge() {
       <ShoppingCartIcon color="action" />
     </Badge>
   );
-}
+};
+
+export default ShoppingCartBadge;
