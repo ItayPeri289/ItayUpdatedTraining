@@ -11,7 +11,7 @@ import LinearIndeterminate from "../ProgressBars/LinearIndeterminate.tsx";
 import { useState } from "react";
 
 const Tabs = () => {
-  const [value, setValue] = useState<string>("1");
+  const [value, setValue] = useState<string>("HomeTab");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -21,15 +21,15 @@ const Tabs = () => {
     <Box>
       <TabContext value={value}>
         <Box dir="rtl">
-          <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label={<HomeIcon />} value="1" />
-            <Tab label={<ShoppingCartIcon />} value="2" />
+          <TabList onChange={handleChange}>
+            <Tab label={<HomeIcon />} value="HomeTab" />
+            <Tab label={<ShoppingCartIcon />} value="CartTab" />
           </TabList>
         </Box>
-        <TabPanel value="1">
+        <TabPanel value="HomeTab">
           <LinearIndeterminate />
         </TabPanel>
-        <TabPanel value="2">
+        <TabPanel value="CartTab">
           <ItemsList />
         </TabPanel>
       </TabContext>
