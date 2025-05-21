@@ -74,7 +74,6 @@ export default function AlertDialog(props: StoreCard) {
             }}
             autoFocus
           >
-            {" "}
             הוסף לעגלה
           </Button>
         </DialogActions>
