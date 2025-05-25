@@ -59,22 +59,20 @@ const ItemsListPage = () => {
   return (
     <Box>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button variant="contained" onClick={() => handleClick()}>
+        <Button variant="contained" onClick={handleClick}>
           הזמן {cartItemsPrice}₪
         </Button>
       </div>
       <ItemsList />
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        open={openSnackBar}
-      >
+        open={openSnackBar}>
         <Box
           sx={{
             padding: 2,
             width: "auto",
             backgroundColor: purchaseSucceeded ? "dodgerblue" : "transparent",
-          }}
-        >
+          }}>
           {purchaseSucceeded ? (
             <LinearDeterminate
               itemsAmount={cartCount}
