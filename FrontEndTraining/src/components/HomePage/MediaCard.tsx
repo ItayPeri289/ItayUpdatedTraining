@@ -8,13 +8,7 @@ import Typography from "@mui/material/Typography";
 import AlertDialog from "./AlertDialog";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import useCartStore from "../../store/cartStore";
-
-interface StoreCard {
-  imageUrl: string;
-  title: string;
-  description: string;
-  price: number;
-}
+import { StoreCard } from "./AlertDialog";
 
 const MediaCard = (props: StoreCard) => {
   const addItem = useCartStore((state) => state.addItem);
@@ -32,8 +26,7 @@ const MediaCard = (props: StoreCard) => {
         </Typography>
         <Typography
           variant="body2"
-          sx={{ color: "text.secondary", fontSize: "1.1rem" }}
-        >
+          sx={{ color: "text.secondary", fontSize: "1.1rem" }}>
           {props.price}₪
         </Typography>
       </CardContent>
@@ -42,8 +35,7 @@ const MediaCard = (props: StoreCard) => {
           display: "flex",
           justifyContent: "space-between",
           marginTop: "1.7rem",
-        }}
-      >
+        }}>
         <AlertDialog
           imageUrl={props.imageUrl}
           title={props.title}
@@ -53,8 +45,7 @@ const MediaCard = (props: StoreCard) => {
         <Button
           variant="contained"
           onClick={() => addItem(props)}
-          sx={{ gap: "0.2rem" }}
-        >
+          sx={{ gap: "0.2rem" }}>
           <ShoppingCartIcon />
           הוסף לעגלה
         </Button>

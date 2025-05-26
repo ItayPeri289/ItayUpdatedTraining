@@ -10,7 +10,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import useCartStore from "../../store/cartStore";
 import { useState } from "react";
 
-interface StoreCard {
+export interface StoreCard {
   imageUrl: string;
   title: string;
   description: string;

@@ -11,7 +11,7 @@ import { sleep } from "../../Utils/Utils";
 
 const ItemsListPage = () => {
   const {
-    cartItemsArray: cartItemsArray,
+    cartItemsArray,
     removeItemByIndex,
     cartItemsPrice,
     balance,

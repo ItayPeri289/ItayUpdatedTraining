@@ -4,10 +4,10 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 
-interface handleThings {
+interface handleClose {
   handleClose: () => void;
 }
-const BuyDialog = (props: handleThings) => (
+const BuyDialog = (props: handleClose) => (
   <Dialog
     open={true}
     onClose={props.handleClose}
