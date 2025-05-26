@@ -14,12 +14,11 @@ const LinearDeterminate = (props: loadingProgressBar) => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentProgress((previousProgress) => {
-        if (previousProgress === 100) return 0;
-
-        const diff = 100 / props.itemsAmount;
-        return Math.min(previousProgress + diff, 100);
-      });
+      setCurrentProgress((previousProgress) =>
+        previousProgress === 100
+          ? 0
+          : Math.min(previousProgress + 100 / props.itemsAmount, 100)
+      );
     }, timeOutMs);
 
     return () => {
