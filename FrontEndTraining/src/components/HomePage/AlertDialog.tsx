@@ -9,15 +9,11 @@ import CardMedia from "@mui/material/CardMedia";
 import InfoIcon from "@mui/icons-material/Info";
 import useCartStore from "../../store/cartStore";
 import { useState } from "react";
+import { StoreCard } from "../../Interfaces";
 
-export interface StoreCard {
-  imageUrl: string;
-  title: string;
-  description: string;
-  price: number;
-}
+interface AlertDialogProps extends StoreCard {}
 
-const AlertDialog = (props: StoreCard) => {
+const AlertDialog = (props: AlertDialogProps) => {
   const addItem = useCartStore((state) => state.addItem);
 
   const [open, setOpen] = useState<boolean>(false);

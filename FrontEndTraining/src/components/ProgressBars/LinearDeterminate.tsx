@@ -2,14 +2,14 @@ import Box from "@mui/material/Box";
 import LinearProgress from "@mui/material/LinearProgress";
 import { useState, useEffect } from "react";
 
-interface loadingProgressBar {
+interface LinearDeterminateProps {
   itemsAmount: number;
   setOpenAlertDialog: (status: boolean) => void;
 }
 
 const timeOutMs = 500;
 
-const LinearDeterminate = (props: loadingProgressBar) => {
+const LinearDeterminate = (props: LinearDeterminateProps) => {
   const [currentProgress, setCurrentProgress] = useState<number>(0);
 
   useEffect(() => {

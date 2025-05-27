@@ -1,4 +1,3 @@
-import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,9 +7,11 @@ import Typography from "@mui/material/Typography";
 import AlertDialog from "./AlertDialog";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import useCartStore from "../../store/cartStore";
-import { StoreCard } from "./AlertDialog";
+import { StoreCard } from "../../Interfaces";
 
-const MediaCard = (props: StoreCard) => {
+interface MediaCardProps extends StoreCard {}
+
+const MediaCard = (props: MediaCardProps) => {
   const addItem = useCartStore((state) => state.addItem);
 
   return (

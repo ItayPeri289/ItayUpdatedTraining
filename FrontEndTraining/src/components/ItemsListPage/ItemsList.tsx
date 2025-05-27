@@ -10,7 +10,7 @@ import useCartStore from "../../store/cartStore";
 
 const ItemsList = () => {
   const { cartItemsArray: cartItemsArray, removeItemByIndex } = useCartStore(
-    (state) => state,
+    (state) => state
   );
 
   return (
@@ -22,8 +22,7 @@ const ItemsList = () => {
               <ListItem
                 secondaryAction={
                   <Box
-                    sx={{ display: "flex", gap: "1rem", alignItems: "center" }}
-                  >
+                    sx={{ display: "flex", gap: "1rem", alignItems: "center" }}>
                     <ListItemText
                       sx={{ textAlign: "right" }}
                       primary={item.title}
@@ -33,13 +32,11 @@ const ItemsList = () => {
                       <img src={item.imageUrl} width={"45rem"} />
                     </Avatar>
                   </Box>
-                }
-              >
+                }>
                 <IconButton
                   edge="end"
                   aria-label="delete"
-                  onClick={() => removeItemByIndex(index)}
-                >
+                  onClick={() => removeItemByIndex(index)}>
                   <DeleteIcon color="error" />
                 </IconButton>
               </ListItem>
