@@ -16,14 +16,14 @@ interface AlertDialogProps extends StoreCard {}
 const AlertDialog = (props: AlertDialogProps) => {
   const addItem = useCartStore((state) => state.addItem);
 
-  const [open, setOpen] = useState<boolean>(false);
+  const [isOpen, isSetOpen] = useState<boolean>(false);
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handleOpen = () => {
+    isSetOpen(true);
   };
 
   const handleClose = () => {
-    setOpen(false);
+    isSetOpen(false);
   };
 
   return (
@@ -31,13 +31,13 @@ const AlertDialog = (props: AlertDialogProps) => {
       <Button
         color="secondary"
         variant="contained"
-        onClick={handleClickOpen}
+        onClick={handleOpen}
         sx={{ gap: "0.3rem" }}>
         <InfoIcon />
         פרטים
       </Button>
       <Dialog
-        open={open}
+        open={isOpen}
         onClose={handleClose}
         aria-describedby={props.description}
         sx={{ textAlign: "right", width: "25rem", margin: "auto" }}>
