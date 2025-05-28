@@ -34,7 +34,6 @@ const AlertDialog = (props: AlertDialogProps) => {
       <Dialog
         open={isOpen}
         onClose={handleClick}
-        aria-describedby={props.description}
         sx={{ textAlign: "right", width: "25rem", margin: "auto" }}>
         <DialogTitle id="title">{props.title}</DialogTitle>
         <DialogContent>

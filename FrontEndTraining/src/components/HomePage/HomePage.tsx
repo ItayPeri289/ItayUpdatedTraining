@@ -1,11 +1,11 @@
 import productsArray from "../../data/Products.json";
-import MediaCard from "./MediaCard";
+import ProductCard from "./ProductCard";
 import "./HomePage.css";
 
 const HomePage = () => (
   <div className="items">
     {productsArray.map((item) => (
-      <MediaCard
+      <ProductCard
         imageUrl={item.image}
         description={item.description}
         title={item.name}

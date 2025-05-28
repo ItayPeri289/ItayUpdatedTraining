@@ -9,9 +9,9 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import useCartStore from "../../store/cartStore";
 import { StoreCard } from "../../Interfaces";
 
-interface MediaCardProps extends StoreCard {}
+interface ProductCardProps extends StoreCard {}
 
-const MediaCard = (props: MediaCardProps) => {
+const ProductCard = (props: ProductCardProps) => {
   const addItem = useCartStore((state) => state.addItem);
 
   return (
@@ -55,4 +55,4 @@ const MediaCard = (props: MediaCardProps) => {
   );
 };
 
-export default MediaCard;
+export default ProductCard;
