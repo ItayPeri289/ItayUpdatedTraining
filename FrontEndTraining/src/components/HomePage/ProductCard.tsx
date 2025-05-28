@@ -12,7 +12,7 @@ import { StoreCard } from "../../Interfaces";
 interface ProductCardProps extends StoreCard {}
 
 const ProductCard = (props: ProductCardProps) => {
-  const addItem = useCartStore((state) => state.addItem);
+  const { addItem } = useCartStore();
 
   return (
     <Card sx={{ width: "18rem", height: "19rem" }}>

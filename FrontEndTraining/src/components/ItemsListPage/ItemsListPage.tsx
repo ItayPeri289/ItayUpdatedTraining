@@ -17,7 +17,7 @@ const ItemsListPage = () => {
     balance,
     reduceBalance,
     cartCount,
-  } = useCartStore((state) => state);
+  } = useCartStore();
 
   const [openSnackBar, setOpenSnackBar] = useState<boolean>(false);
 

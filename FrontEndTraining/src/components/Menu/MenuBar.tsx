@@ -5,7 +5,7 @@ import ShoppingCartBadge from "./ShoppingCartBadge";
 import useCartStore from "../../store/cartStore";
 
 const MenuBar = () => {
-  const balance = useCartStore((state) => state.balance);
+  const { balance } = useCartStore();
 
   return (
     <AppBar position="sticky">

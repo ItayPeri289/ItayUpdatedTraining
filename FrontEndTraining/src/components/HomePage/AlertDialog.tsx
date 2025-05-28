@@ -13,7 +13,7 @@ import { StoreCard } from "../../Interfaces";
 interface AlertDialogProps extends StoreCard {}
 
 const AlertDialog = (props: AlertDialogProps) => {
-  const addItem = useCartStore((state) => state.addItem);
+  const { addItem } = useCartStore();
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
