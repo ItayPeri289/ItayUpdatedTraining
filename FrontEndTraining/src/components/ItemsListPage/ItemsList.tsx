@@ -9,9 +9,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import useCartStore from "../../store/cartStore";
 
 const ItemsList = () => {
-  const { cartItemsArray: cartItemsArray, removeItemByIndex } = useCartStore(
-    (state) => state
-  );
+  const { cartItemsArray, removeItemByIndex } = useCartStore((state) => state);
 
   return (
     <Box>

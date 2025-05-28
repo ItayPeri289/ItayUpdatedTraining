@@ -15,8 +15,7 @@ const MenuBar = () => {
           variant="h6"
           align="right"
           component="div"
-          sx={{ flexGrow: 1 }}
-        >
+          sx={{ flexGrow: 1 }}>
           {balance}₪ :סכום כולל
         </Typography>
       </Toolbar>
