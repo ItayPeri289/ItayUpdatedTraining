@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import LinearDeterminate from "../ProgressBars/LinearDeterminate";
-import BuyDialog from "./BuyDialog";
+import PurchaseSucceededDialog from "./PurchaseSucceededDialog";
 import ItemsList from "./ItemsList";
 import Alert from "@mui/material/Alert";
 import { sleep } from "../../Utils/Utils";
@@ -51,7 +51,9 @@ const ItemsListPage = () => {
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div> העגלה ריקה</div>
-        {openAlertDialog && <BuyDialog handleClose={handleClose} />}
+        {openAlertDialog && (
+          <PurchaseSucceededDialog handleClose={handleClose} />
+        )}
       </div>
     );
   }

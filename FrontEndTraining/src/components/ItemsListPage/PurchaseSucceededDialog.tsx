@@ -4,11 +4,11 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 
-interface BuyDialogProps {
+interface PurchaseSucceededDialogProps {
   handleClose: () => void;
 }
 
-const BuyDialog = (props: BuyDialogProps) => (
+const PurchaseSucceededDialog = (props: PurchaseSucceededDialogProps) => (
   <Dialog
     open={true}
     onClose={props.handleClose}
@@ -31,4 +31,4 @@ const BuyDialog = (props: BuyDialogProps) => (
   </Dialog>
 );
 
-export default BuyDialog;
+export default PurchaseSucceededDialog;
